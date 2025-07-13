@@ -5289,6 +5289,7 @@ __metadata:
     react-redux: "npm:^9.1.2"
     react-toastify: "npm:^10.0.6"
     tailwindcss: "npm:^3.4.1"
+    typescript: "npm:^4.3.5"
   languageName: unknown
   linkType: soft
 
