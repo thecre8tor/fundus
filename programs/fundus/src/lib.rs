@@ -8,11 +8,15 @@ pub mod instructions;
 pub mod states;
 
 use instructions::*;
-use states::*;
+// use states::*;
 
 declare_id!("BgBqnzoDwekLrMWCPJXcbx3V7naXVgqHZzXNjHi6Lgvb");
 
 #[program]
 pub mod fundus {
     use super::*;
+
+    pub fn initialize(context: Context<AppContext>) -> Result<()> {
+        instructions::AppContext::initialize(context)
+    }
 }

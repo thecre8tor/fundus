@@ -19,7 +19,7 @@ fn test_initialize() {
 
     let tx = program
         .request()
-        .accounts(fundus::accounts::Initialize {})
+        .accounts(fundus::accounts::AppContext {})
         .args(fundus::instruction::Initialize {})
         .send()
         .expect("");
