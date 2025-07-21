@@ -15,6 +15,4 @@ declare_id!("BgBqnzoDwekLrMWCPJXcbx3V7naXVgqHZzXNjHi6Lgvb");
 #[program]
 pub mod fundus {
     use super::*;
-
-
 }
