@@ -2,6 +2,7 @@ use anchor_lang::prelude::*;
 
 use crate::{
     constants::ANCHOR_DISCRIMINATOR_SIZE,
+    errors::ErrorCode::*,
     states::{CampaignState, ProgramState},
 };
 
@@ -32,6 +33,13 @@ impl<'info> CreateCampaignCtx<'info> {
         image_url: String,
         goal: u64,
     ) -> Result<()> {
+        let campaign = &mut context.accounts.campaign;
+        let program_state = &mut context.accounts.program_state;
+
+        if title.len() > 64 {
+            return Err(TitleTooLong.into());
+        }
+
         Ok(())
     }
 }
