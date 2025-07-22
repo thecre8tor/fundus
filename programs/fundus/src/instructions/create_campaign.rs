@@ -25,7 +25,13 @@ pub struct CreateCampaignCtx<'info> {
 }
 
 impl<'info> CreateCampaignCtx<'info> {
-    pub fn create_campaign(context: Context<Self>) -> Result<()> {
+    pub fn create_campaign(
+        context: Context<Self>,
+        title: String,
+        description: String,
+        image_url: String,
+        goal: u64,
+    ) -> Result<()> {
         Ok(())
     }
 }
