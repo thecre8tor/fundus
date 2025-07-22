@@ -5,7 +5,7 @@ use anchor_lang::prelude::*;
 pub struct CampaignState {
     pub cid: u64,
     pub creator: Pubkey,
-    #[max_len(64)]
+    #[max_len(64)] // 64 character length
     pub title: String,
     #[max_len(512)]
     pub description: String,
